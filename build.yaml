@@ -19,6 +19,8 @@ include:
   - board: nice_nano
     shield: settings_reset
     artifact-name: settings_reset_dongle
+    cmake-args: -DCONFIG_ZMK_RGB_UNDERGLOW=n
   - board: assimilator-bt
     shield: settings_reset
     artifact-name: settings_reset_assimilator
+    cmake-args: -DCONFIG_ZMK_RGB_UNDERGLOW=n
