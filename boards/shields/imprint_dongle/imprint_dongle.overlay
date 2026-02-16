@@ -1,0 +1,29 @@
+/* Dongle Central: USB-connected nRF52840 with no physical keys or sensors */
+
+#include "imprint_dongle.dtsi"
+
+/ {
+    chosen {
+        zmk,kscan = &mock_kscan;
+    };
+
+    mock_kscan: mock_kscan {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
+};
+
+/* Disable the real kscan (no physical matrix on dongle, row-gpios not defined) */
+&kscan0 {
+    status = "disabled";
+};
+
+&trackball_central_listener {
+    status = "okay";
+};
+
+&trackball_peripheral_listener {
+    status = "okay";
+};

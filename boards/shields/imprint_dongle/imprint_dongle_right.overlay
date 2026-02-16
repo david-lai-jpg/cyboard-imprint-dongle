@@ -1,0 +1,82 @@
+/* Right Half Peripheral: key matrix + right PMW3610 trackball */
+
+#include "imprint_dongle.dtsi"
+
+/* Row-offset for right half transforms (matches upstream imprint_right.overlay) */
+&imprint_function_row {
+    row-offset = <7>;
+};
+
+&imprint_function_row_full_bottom_row {
+    row-offset = <7>;
+};
+
+&imprint_function_row_no_bottom_row {
+    row-offset = <7>;
+};
+
+&imprint_number_row {
+    row-offset = <7>;
+};
+
+&imprint_number_row_full_bottom_row {
+    row-offset = <7>;
+};
+
+&imprint_number_row_no_bottom_row {
+    row-offset = <7>;
+};
+
+&imprint_letters_only {
+    row-offset = <7>;
+};
+
+&imprint_letters_only_full_bottom_row {
+    row-offset = <7>;
+};
+
+&imprint_letters_only_no_bottom_row {
+    row-offset = <7>;
+};
+
+&dactyl_manuform_number_row {
+    row-offset = <7>;
+};
+
+&dactyl_single_arc_letters_only {
+    row-offset = <7>;
+};
+
+&kscan0 {
+    row-gpios
+        = <&gpio1 4 GPIO_ACTIVE_HIGH>
+        , <&gpio0 11 GPIO_ACTIVE_HIGH>
+        , <&gpio0 29 GPIO_ACTIVE_HIGH>
+        , <&gpio1 0 GPIO_ACTIVE_HIGH>
+        , <&gpio0 10 GPIO_ACTIVE_HIGH>
+        , <&gpio0 2 GPIO_ACTIVE_HIGH>
+        , <&gpio0 9 GPIO_ACTIVE_HIGH>
+        ;
+};
+
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+&spi1 {
+    cs-gpios = <&gpio0 19 GPIO_ACTIVE_LOW>;
+
+    trackball_right: trackball_right@0 {
+        status = "okay";
+        compatible = "cyboard,pmw3610";
+        reg = <0>;
+        spi-max-frequency = <2000000>;
+        irq-gpios = <&gpio0 17 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        cpi = <600>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+    };
+};
+
+/* Forward right trackball to central via channel 1 */
+&trackball_peripheral_split_right {
+    device = <&trackball_right>;
+};
