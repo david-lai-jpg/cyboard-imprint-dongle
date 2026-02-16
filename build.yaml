@@ -6,7 +6,7 @@ include:
   - board: assimilator-bt
     shield: imprint_right
   # Dongle builds
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: imprint_dongle
     artifact-name: imprint_dongle
   - board: assimilator-bt
@@ -16,7 +16,7 @@ include:
     shield: imprint_dongle_right
     artifact-name: imprint_dongle_right
   # Settings reset (flash to all 3 devices before initial pairing)
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: settings_reset
     artifact-name: settings_reset_dongle
   - board: assimilator-bt
