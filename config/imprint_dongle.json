@@ -2,8 +2,8 @@
   "id": "imprint_dongle",
   "name": "Cyboard Imprint (Function Row, 5-Key Bottom)",
   "layouts": {
-    "default_layout": {
-      "name": "default_layout",
+    "imprint_function_row_full_bottom_row": {
+      "name": "imprint_function_row_full_bottom_row",
       "layout": [
         { "row": 0, "col": 0, "x": 0, "y": 0 },
         { "row": 0, "col": 1, "x": 1, "y": 0 },
