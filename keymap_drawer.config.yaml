@@ -1,0 +1,189 @@
+draw_config:
+  n_columns: 1
+  draw_key_sides: true
+  key_w: 60.0
+  key_h: 56.0
+  split_gap: 30.0
+  combo_w: 28.0
+  combo_h: 26.0
+  key_rx: 6.0
+  key_ry: 6.0
+  inner_pad_w: 2.0
+  inner_pad_h: 2.0
+  outer_pad_w: 30.0
+  outer_pad_h: 40.0
+  line_spacing: 1.2
+  arc_radius: 6.0
+  append_colon_to_layer_header: true
+  small_pad: 2.0
+  svg_extra_style: |
+    svg.keymap {
+      font-family: Ubuntu Mono, Inconsolata, Consolas, Liberation Mono, Menlo, monospace;
+      font-size: 12px;
+      font-weight: bold;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* Highlight held keys */
+    rect.held, rect.combo.held {
+        fill: #ffc;
+    }
+
+  shrink_wide_legends: 6
+  glyph_tap_size: 18
+  glyph_hold_size: 15
+  glyph_shifted_size: 15
+  glyphs: {}
+  glyph_urls:
+    mdi: https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/master/svg/{}.svg
+    tabler: https://unpkg.com/@tabler/icons/icons/outline/{}.svg
+  use_local_cache: true
+
+parse_config:
+  mark_alternate_layer_activators: true
+  trans_legend:
+    tap: $$mdi:transfer$$
+    type: trans
+
+  raw_binding_map:
+    "&none":
+      tap: $$mdi:minus-circle-outline$$
+      type: none
+
+  zmk_keycode_map:
+    # Symbols
+    EXCL: "!"
+    AT: "@"
+    HASH: "#"
+    DLLR: $
+    PRCNT: "%"
+    CARET: ^
+    AMPS: "&"
+    ASTRK: "*"
+    LPAR: (
+    RPAR: )
+    EQUAL:
+      tap: "="
+      shifted: "+"
+    PLUS: +
+    MINUS:
+      tap: "-"
+      shifted: "_"
+    UNDER: _
+    FSLH:
+      tap: "/"
+      shifted: "?"
+    QMARK: "?"
+    BSLH:
+      tap: '\'
+      shifted: "|"
+    PIPE: "|"
+    SEMI:
+      tap: ";"
+      shifted: ":"
+    SQT:
+      tap: "'"
+      shifted: '"'
+    DQT: '"'
+    COMMA:
+      tap: ","
+      shifted: "<"
+    DOT:
+      tap: "."
+      shifted: ">"
+    LBKT:
+      tap: "["
+      shifted: "{"
+    RBKT:
+      tap: "]"
+      shifted: "}"
+    LBRC: "{"
+    RBRC: "}"
+    GRAVE:
+      tap: "`"
+      shifted: "~"
+    TILDE: "~"
+
+    # Numbers
+    N1:
+      tap: 1
+      shifted: "!"
+    N2:
+      tap: 2
+      shifted: "@"
+    N3:
+      tap: 3
+      shifted: "#"
+    N4:
+      tap: 4
+      shifted: "$"
+    N5:
+      tap: 5
+      shifted: "%"
+    N6:
+      tap: 6
+      shifted: "^"
+    N7:
+      tap: 7
+      shifted: "&"
+    N8:
+      tap: 8
+      shifted: "*"
+    N9:
+      tap: 9
+      shifted: "("
+    N0:
+      tap: 0
+      shifted: ")"
+
+    # Modifiers
+    LCTRL: Ctrl
+    LALT: Alt
+    LSHFT: Shift
+    LGUI: Cmd
+    RCTRL: Ctrl
+    RALT: Alt
+    RSHFT: Shift
+
+    # Arrows
+    UP: $$mdi:arrow-up-bold$$
+    DOWN: $$mdi:arrow-down-bold$$
+    LEFT: $$mdi:arrow-left-bold$$
+    RIGHT: $$mdi:arrow-right-bold$$
+
+    # Whitespace
+    ENTER: $$mdi:keyboard-return$$
+    RET: $$mdi:keyboard-return$$
+    ESC: $$mdi:keyboard-esc$$
+    TAB: $$mdi:keyboard-tab$$
+    SPACE: $$mdi:keyboard-space$$
+    BSPC: $$mdi:backspace$$
+    DEL: $$mdi:backspace-reverse-outline$$
+
+    # Navigation
+    HOME: Home
+    END: End
+    PAGE_UP: PgUp
+    PAGE_DOWN: PgDn
+
+    # Locks
+    CAPS: $$mdi:apple-keyboard-caps$$
+
+    # Media
+    C_MUTE: $$mdi:volume-off$$
+    C_VOL_UP: $$mdi:volume-high$$
+    C_VOL_DN: $$mdi:volume-low$$
+    C_NEXT: $$mdi:skip-next$$
+    C_PREV: $$mdi:skip-previous$$
+    C_PP: $$mdi:play-pause$$
+
+    # Bluetooth
+    BT_CLR: $$mdi:bluetooth-off$$
+    BT_SEL: $$mdi:bluetooth-connect$$
+
+    # System
+    "&sys_reset":
+      type: bootloader
+      tap: $$mdi:backup-restore$$
+    "&bootloader":
+      tap: $$mdi:progress-download$$
