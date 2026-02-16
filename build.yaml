@@ -15,12 +15,11 @@ include:
   - board: assimilator-bt
     shield: imprint_dongle_right
     artifact-name: imprint_dongle_right
-  # Settings reset (flash to all 3 devices before initial pairing)
+  # Settings reset — flash to dongle before initial pairing.
+  # For the halves, use &bt BT_CLR_ALL from the keymap instead.
+  # (assimilator-bt settings_reset fails: upstream board DTS references
+  #  spi1_default pinctrl that only the imprint shield overlay provides.)
   - board: nice_nano
     shield: settings_reset
     artifact-name: settings_reset_dongle
-    cmake-args: -DCONFIG_ZMK_RGB_UNDERGLOW=n
-  - board: assimilator-bt
-    shield: settings_reset
-    artifact-name: settings_reset_assimilator
     cmake-args: -DCONFIG_ZMK_RGB_UNDERGLOW=n

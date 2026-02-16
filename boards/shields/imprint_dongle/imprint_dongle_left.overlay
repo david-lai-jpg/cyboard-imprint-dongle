@@ -35,3 +35,8 @@
 &trackball_peripheral_split {
     device = <&trackball_left>;
 };
+
+/* Disable the right-hand channel (not used on this peripheral) */
+&trackball_peripheral_split_right {
+    status = "disabled";
+};
