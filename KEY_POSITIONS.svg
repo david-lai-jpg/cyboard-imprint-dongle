@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1142" height="562" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .key { fill: #2d2d2d; stroke: #00ff00; stroke-width: 2; }
+      .key-number { fill: #ff00ff; font-family: 'Courier New', monospace; font-size: 18px; font-weight: bold; text-anchor: middle; }
+      .thumb { fill: #3d3d3d; stroke: #00ff00; stroke-width: 2; }
+      .title { fill: #ffffff; font-family: 'Courier New', monospace; font-size: 24px; font-weight: bold; text-anchor: middle; }
+      .subtitle { fill: #888888; font-family: 'Courier New', monospace; font-size: 13px; text-anchor: middle; }
+      .section-label { fill: #ffff00; font-family: 'Courier New', monospace; font-size: 14px; font-weight: bold; text-anchor: middle; }
+      .row-label { fill: #00ffff; font-family: 'Courier New', monospace; font-size: 11px; text-anchor: end; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1142" height="562" fill="#0a0a0a"/>
+
+  <!-- Title -->
+  <text x="571" y="30" class="title">CYBOARD IMPRINT - KEY POSITION MAP</text>
+  <text x="571" y="50" class="subtitle">82 Keys Total | imprint_function_row_full_bottom_row</text>
+
+  <!-- Row labels -->
+  <text x="46" y="97" class="row-label">R0</text>
+  <text x="46" y="157" class="row-label">R1</text>
+  <text x="46" y="217" class="row-label">R2</text>
+  <text x="46" y="277" class="row-label">R3</text>
+  <text x="46" y="337" class="row-label">R4</text>
+  <text x="46" y="397" class="row-label">R5</text>
+
+  <!-- ═══ ROW 0: positions 0-11 (F-keys) ═══ -->
+  <!-- Left 0-5 -->
+  <rect x="50" y="70" width="52" height="52" class="key" rx="6"/>
+  <text x="76" y="103" class="key-number">0</text>
+
+  <rect x="110" y="70" width="52" height="52" class="key" rx="6"/>
+  <text x="136" y="103" class="key-number">1</text>
+
+  <rect x="170" y="70" width="52" height="52" class="key" rx="6"/>
+  <text x="196" y="103" class="key-number">2</text>
+
+  <rect x="230" y="70" width="52" height="52" class="key" rx="6"/>
+  <text x="256" y="103" class="key-number">3</text>
+
+  <rect x="290" y="70" width="52" height="52" class="key" rx="6"/>
+  <text x="316" y="103" class="key-number">4</text>
+
+  <rect x="350" y="70" width="52" height="52" class="key" rx="6"/>
+  <text x="376" y="103" class="key-number">5</text>
+
+  <!-- Right 6-11 -->
+  <rect x="740" y="70" width="52" height="52" class="key" rx="6"/>
+  <text x="766" y="103" class="key-number">6</text>
+
+  <rect x="800" y="70" width="52" height="52" class="key" rx="6"/>
+  <text x="826" y="103" class="key-number">7</text>
+
+  <rect x="860" y="70" width="52" height="52" class="key" rx="6"/>
+  <text x="886" y="103" class="key-number">8</text>
+
+  <rect x="920" y="70" width="52" height="52" class="key" rx="6"/>
+  <text x="946" y="103" class="key-number">9</text>
+
+  <rect x="980" y="70" width="52" height="52" class="key" rx="6"/>
+  <text x="1006" y="103" class="key-number">10</text>
+
+  <rect x="1040" y="70" width="52" height="52" class="key" rx="6"/>
+  <text x="1066" y="103" class="key-number">11</text>
+
+  <!-- ═══ ROW 1: positions 12-23 (number row) ═══ -->
+  <!-- Left 12-17 -->
+  <rect x="50" y="130" width="52" height="52" class="key" rx="6"/>
+  <text x="76" y="163" class="key-number">12</text>
+
+  <rect x="110" y="130" width="52" height="52" class="key" rx="6"/>
+  <text x="136" y="163" class="key-number">13</text>
+
+  <rect x="170" y="130" width="52" height="52" class="key" rx="6"/>
+  <text x="196" y="163" class="key-number">14</text>
+
+  <rect x="230" y="130" width="52" height="52" class="key" rx="6"/>
+  <text x="256" y="163" class="key-number">15</text>
+
+  <rect x="290" y="130" width="52" height="52" class="key" rx="6"/>
+  <text x="316" y="163" class="key-number">16</text>
+
+  <rect x="350" y="130" width="52" height="52" class="key" rx="6"/>
+  <text x="376" y="163" class="key-number">17</text>
+
+  <!-- Right 18-23 -->
+  <rect x="740" y="130" width="52" height="52" class="key" rx="6"/>
+  <text x="766" y="163" class="key-number">18</text>
+
+  <rect x="800" y="130" width="52" height="52" class="key" rx="6"/>
+  <text x="826" y="163" class="key-number">19</text>
+
+  <rect x="860" y="130" width="52" height="52" class="key" rx="6"/>
+  <text x="886" y="163" class="key-number">20</text>
+
+  <rect x="920" y="130" width="52" height="52" class="key" rx="6"/>
+  <text x="946" y="163" class="key-number">21</text>
+
+  <rect x="980" y="130" width="52" height="52" class="key" rx="6"/>
+  <text x="1006" y="163" class="key-number">22</text>
+
+  <rect x="1040" y="130" width="52" height="52" class="key" rx="6"/>
+  <text x="1066" y="163" class="key-number">23</text>
+
+  <!-- ═══ ROW 2: positions 24-35 (QWERTY) ═══ -->
+  <!-- Left 24-29 -->
+  <rect x="50" y="190" width="52" height="52" class="key" rx="6"/>
+  <text x="76" y="223" class="key-number">24</text>
+
+  <rect x="110" y="190" width="52" height="52" class="key" rx="6"/>
+  <text x="136" y="223" class="key-number">25</text>
+
+  <rect x="170" y="190" width="52" height="52" class="key" rx="6"/>
+  <text x="196" y="223" class="key-number">26</text>
+
+  <rect x="230" y="190" width="52" height="52" class="key" rx="6"/>
+  <text x="256" y="223" class="key-number">27</text>
+
+  <rect x="290" y="190" width="52" height="52" class="key" rx="6"/>
+  <text x="316" y="223" class="key-number">28</text>
+
+  <rect x="350" y="190" width="52" height="52" class="key" rx="6"/>
+  <text x="376" y="223" class="key-number">29</text>
+
+  <!-- Right 30-35 -->
+  <rect x="740" y="190" width="52" height="52" class="key" rx="6"/>
+  <text x="766" y="223" class="key-number">30</text>
+
+  <rect x="800" y="190" width="52" height="52" class="key" rx="6"/>
+  <text x="826" y="223" class="key-number">31</text>
+
+  <rect x="860" y="190" width="52" height="52" class="key" rx="6"/>
+  <text x="886" y="223" class="key-number">32</text>
+
+  <rect x="920" y="190" width="52" height="52" class="key" rx="6"/>
+  <text x="946" y="223" class="key-number">33</text>
+
+  <rect x="980" y="190" width="52" height="52" class="key" rx="6"/>
+  <text x="1006" y="223" class="key-number">34</text>
+
+  <rect x="1040" y="190" width="52" height="52" class="key" rx="6"/>
+  <text x="1066" y="223" class="key-number">35</text>
+
+  <!-- ═══ ROW 3: positions 36-47 (home row) ═══ -->
+  <!-- Left 36-41 -->
+  <rect x="50" y="250" width="52" height="52" class="key" rx="6"/>
+  <text x="76" y="283" class="key-number">36</text>
+
+  <rect x="110" y="250" width="52" height="52" class="key" rx="6"/>
+  <text x="136" y="283" class="key-number">37</text>
+
+  <rect x="170" y="250" width="52" height="52" class="key" rx="6"/>
+  <text x="196" y="283" class="key-number">38</text>
+
+  <rect x="230" y="250" width="52" height="52" class="key" rx="6"/>
+  <text x="256" y="283" class="key-number">39</text>
+
+  <rect x="290" y="250" width="52" height="52" class="key" rx="6"/>
+  <text x="316" y="283" class="key-number">40</text>
+
+  <rect x="350" y="250" width="52" height="52" class="key" rx="6"/>
+  <text x="376" y="283" class="key-number">41</text>
+
+  <!-- Right 42-47 -->
+  <rect x="740" y="250" width="52" height="52" class="key" rx="6"/>
+  <text x="766" y="283" class="key-number">42</text>
+
+  <rect x="800" y="250" width="52" height="52" class="key" rx="6"/>
+  <text x="826" y="283" class="key-number">43</text>
+
+  <rect x="860" y="250" width="52" height="52" class="key" rx="6"/>
+  <text x="886" y="283" class="key-number">44</text>
+
+  <rect x="920" y="250" width="52" height="52" class="key" rx="6"/>
+  <text x="946" y="283" class="key-number">45</text>
+
+  <rect x="980" y="250" width="52" height="52" class="key" rx="6"/>
+  <text x="1006" y="283" class="key-number">46</text>
+
+  <rect x="1040" y="250" width="52" height="52" class="key" rx="6"/>
+  <text x="1066" y="283" class="key-number">47</text>
+
+  <!-- ═══ ROW 4: positions 48-59 (bottom alpha) ═══ -->
+  <!-- Left 48-53 -->
+  <rect x="50" y="310" width="52" height="52" class="key" rx="6"/>
+  <text x="76" y="343" class="key-number">48</text>
+
+  <rect x="110" y="310" width="52" height="52" class="key" rx="6"/>
+  <text x="136" y="343" class="key-number">49</text>
+
+  <rect x="170" y="310" width="52" height="52" class="key" rx="6"/>
+  <text x="196" y="343" class="key-number">50</text>
+
+  <rect x="230" y="310" width="52" height="52" class="key" rx="6"/>
+  <text x="256" y="343" class="key-number">51</text>
+
+  <rect x="290" y="310" width="52" height="52" class="key" rx="6"/>
+  <text x="316" y="343" class="key-number">52</text>
+
+  <rect x="350" y="310" width="52" height="52" class="key" rx="6"/>
+  <text x="376" y="343" class="key-number">53</text>
+
+  <!-- Right 54-59 -->
+  <rect x="740" y="310" width="52" height="52" class="key" rx="6"/>
+  <text x="766" y="343" class="key-number">54</text>
+
+  <rect x="800" y="310" width="52" height="52" class="key" rx="6"/>
+  <text x="826" y="343" class="key-number">55</text>
+
+  <rect x="860" y="310" width="52" height="52" class="key" rx="6"/>
+  <text x="886" y="343" class="key-number">56</text>
+
+  <rect x="920" y="310" width="52" height="52" class="key" rx="6"/>
+  <text x="946" y="343" class="key-number">57</text>
+
+  <rect x="980" y="310" width="52" height="52" class="key" rx="6"/>
+  <text x="1006" y="343" class="key-number">58</text>
+
+  <rect x="1040" y="310" width="52" height="52" class="key" rx="6"/>
+  <text x="1066" y="343" class="key-number">59</text>
+
+  <!-- ═══ ROW 5: positions 60-69 (bottom row, 5L + 5R) ═══ -->
+  <!-- Left 60-64 -->
+  <rect x="50" y="370" width="52" height="52" class="key" rx="6"/>
+  <text x="76" y="403" class="key-number">60</text>
+
+  <rect x="110" y="370" width="52" height="52" class="key" rx="6"/>
+  <text x="136" y="403" class="key-number">61</text>
+
+  <rect x="170" y="370" width="52" height="52" class="key" rx="6"/>
+  <text x="196" y="403" class="key-number">62</text>
+
+  <rect x="230" y="370" width="52" height="52" class="key" rx="6"/>
+  <text x="256" y="403" class="key-number">63</text>
+
+  <rect x="290" y="370" width="52" height="52" class="key" rx="6"/>
+  <text x="316" y="403" class="key-number">64</text>
+
+  <!-- Right 65-69 -->
+  <rect x="800" y="370" width="52" height="52" class="key" rx="6"/>
+  <text x="826" y="403" class="key-number">65</text>
+
+  <rect x="860" y="370" width="52" height="52" class="key" rx="6"/>
+  <text x="886" y="403" class="key-number">66</text>
+
+  <rect x="920" y="370" width="52" height="52" class="key" rx="6"/>
+  <text x="946" y="403" class="key-number">67</text>
+
+  <rect x="980" y="370" width="52" height="52" class="key" rx="6"/>
+  <text x="1006" y="403" class="key-number">68</text>
+
+  <rect x="1040" y="370" width="52" height="52" class="key" rx="6"/>
+  <text x="1066" y="403" class="key-number">69</text>
+
+  <!-- ═══ ROW 6: positions 70-75 (thumb cluster top) ═══ -->
+  <!-- Left thumb 70-72 -->
+  <rect x="380" y="400" width="52" height="52" class="thumb" rx="6"/>
+  <text x="406" y="433" class="key-number">70</text>
+
+  <rect x="440" y="400" width="52" height="52" class="thumb" rx="6"/>
+  <text x="466" y="433" class="key-number">71</text>
+
+  <rect x="500" y="400" width="52" height="52" class="thumb" rx="6"/>
+  <text x="526" y="433" class="key-number">72</text>
+
+  <!-- Right thumb 73-75 -->
+  <rect x="590" y="400" width="52" height="52" class="thumb" rx="6"/>
+  <text x="616" y="433" class="key-number">73</text>
+
+  <rect x="650" y="400" width="52" height="52" class="thumb" rx="6"/>
+  <text x="676" y="433" class="key-number">74</text>
+
+  <rect x="710" y="400" width="52" height="52" class="thumb" rx="6"/>
+  <text x="736" y="433" class="key-number">75</text>
+
+  <!-- ═══ ROW 7: positions 76-81 (thumb cluster bottom) ═══ -->
+  <!-- Left thumb 76-78 -->
+  <rect x="380" y="460" width="52" height="52" class="thumb" rx="6"/>
+  <text x="406" y="493" class="key-number">76</text>
+
+  <rect x="440" y="460" width="52" height="52" class="thumb" rx="6"/>
+  <text x="466" y="493" class="key-number">77</text>
+
+  <rect x="500" y="460" width="52" height="52" class="thumb" rx="6"/>
+  <text x="526" y="493" class="key-number">78</text>
+
+  <!-- Right thumb 79-81 -->
+  <rect x="590" y="460" width="52" height="52" class="thumb" rx="6"/>
+  <text x="616" y="493" class="key-number">79</text>
+
+  <rect x="650" y="460" width="52" height="52" class="thumb" rx="6"/>
+  <text x="676" y="493" class="key-number">80</text>
+
+  <rect x="710" y="460" width="52" height="52" class="thumb" rx="6"/>
+  <text x="736" y="493" class="key-number">81</text>
+
+  <!-- Section labels -->
+  <text x="226" y="540" class="section-label">LEFT HALF</text>
+  <text x="545" y="540" class="section-label">THUMBS</text>
+  <text x="890" y="540" class="section-label">RIGHT HALF</text>
+
+  <!-- Legend -->
+  <text x="571" y="556" class="subtitle">R0: F-keys (0-11) | R1: Numbers (12-23) | R2: QWERTY (24-35) | R3: Home (36-47) | R4: Bottom (48-59) | R5: Edge (60-69) | Thumb: 70-81</text>
+</svg>
