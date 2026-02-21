@@ -18,7 +18,7 @@ Personal [ZMK](https://zmk.dev/) firmware for the [Cyboard Imprint](https://cybo
  WS2812 RGB underglow
 ```
 
-- **Dongle** (`nice_nano`): BLE central + USB HID. Receives key matrix + dual trackball data from both halves, outputs to host. Has an SH1106 128x64 OLED display.
+- **Dongle** (`nice_nano_v2`): BLE central + USB HID. Receives key matrix + dual trackball data from both halves, outputs to host. Has an SH1106 128x64 OLED display.
 - **Left half** (`assimilator-bt`): BLE peripheral. PMW3610 trackball configured as scroll wheel. WS2812 RGB underglow (150 LEDs).
 - **Right half** (`assimilator-bt`): BLE peripheral. PMW3610 trackball configured as mouse cursor. WS2812 RGB underglow (150 LEDs).
 
@@ -71,10 +71,11 @@ Firmware builds automatically via GitHub Actions on every push. Download artifac
 
 | Artifact | Board | Shield | Description |
 |----------|-------|--------|-------------|
-| `imprint_dongle` | `nice_nano` | `imprint_dongle` | Dongle central (USB + OLED) |
+| `imprint_dongle` | `nice_nano_v2` | `imprint_dongle` | Dongle central (USB + OLED) |
 | `imprint_dongle_left` | `assimilator-bt` | `imprint_dongle_left` | Left peripheral |
 | `imprint_dongle_right` | `assimilator-bt` | `imprint_dongle_right` | Right peripheral |
-| `settings_reset_dongle` | `nice_nano` | `settings_reset` | Bond clearing for dongle |
+| `settings_reset_dongle` | `nice_nano_v2` | `settings_reset` | Bond clearing for dongle |
+| `settings_reset_peripheral` | `assimilator-bt` | `settings_reset_peripheral` | Bond clearing for keyboard halves |
 | `imprint_left` | `assimilator-bt` | `imprint_left` | Fallback: original non-dongle left |
 | `imprint_right` | `assimilator-bt` | `imprint_right` | Fallback: original non-dongle right |
 
@@ -82,12 +83,11 @@ Firmware builds automatically via GitHub Actions on every push. Download artifac
 
 ### Initial Setup (First Time)
 
-1. **Clear bonds on dongle**: Flash `settings_reset_dongle.uf2` to the dongle via USB
+1. **Clear bonds on ALL devices**: Flash `settings_reset_dongle.uf2` to the dongle and `settings_reset_peripheral.uf2` to both keyboard halves
 2. **Flash dongle firmware**: Flash `imprint_dongle.uf2` to the dongle
-3. **Clear bonds on halves**: On each half, use `&bt BT_CLR_ALL` from the FN layer (Layer 2), or flash the original `settings_reset` UF2 if available
-4. **Flash left half**: Flash `imprint_dongle_left.uf2` via USB bootloader
-5. **Flash right half**: Flash `imprint_dongle_right.uf2` via USB bootloader
-6. **Pair**: Power cycle all three devices. They should auto-pair.
+3. **Flash left half**: Flash `imprint_dongle_left.uf2` via USB bootloader
+4. **Flash right half**: Flash `imprint_dongle_right.uf2` via USB bootloader
+5. **Pair**: Power cycle all three devices. They should auto-pair.
 
 ### Entering Bootloader
 
@@ -99,8 +99,8 @@ Firmware builds automatically via GitHub Actions on every push. Download artifac
 If halves don't connect to the dongle:
 
 1. Flash `settings_reset_dongle.uf2` to the dongle
-2. Use `&bt BT_CLR_ALL` on both halves (Layer 2 has BT controls)
-3. Re-flash the dongle firmware
+2. Flash `settings_reset_peripheral.uf2` to both halves
+3. Re-flash all firmware (dongle first, then halves)
 4. Power cycle all devices
 
 ## File Structure
@@ -116,8 +116,17 @@ boards/shields/imprint_dongle/
 └── boards/
     └── assimilator-bt.overlay  # SPI pinctrl for trackball + WS2812 LEDs
 
+boards/shields/settings_reset_peripheral/
+├── Kconfig.shield              # Shield symbol definition
+├── Kconfig.defconfig           # Keyboard name override
+├── settings_reset_peripheral.conf     # Settings reset + disable BLE/display/RGB
+├── settings_reset_peripheral.overlay  # Mock kscan (no physical keys needed)
+├── settings_reset_peripheral.keymap   # Minimal keymap with sys_reset
+└── boards/
+    └── assimilator-bt.overlay  # SPI1 pinctrl fix for assimilator-bt board
+
 config/
-├── imprint_dongle.conf         # Base conf (all 3 builds): TX power, RGB off, display on
+├── imprint_dongle.conf         # Dongle conf: TX power, RGB off, display on
 ├── imprint_dongle_left.conf    # Left: RGB on + color settings, display off
 ├── imprint_dongle_right.conf   # Right: RGB on + color settings, display off
 ├── imprint_dongle.keymap       # Keymap (shared by all 3 builds)

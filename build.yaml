@@ -6,7 +6,7 @@ include:
   - board: assimilator-bt
     shield: imprint_right
   # Dongle builds
-  - board: nice_nano
+  - board: nice_nano_v2
     shield: imprint_dongle
     artifact-name: imprint_dongle
   - board: assimilator-bt
@@ -15,11 +15,11 @@ include:
   - board: assimilator-bt
     shield: imprint_dongle_right
     artifact-name: imprint_dongle_right
-  # Settings reset — flash to dongle before initial pairing.
-  # For the halves, use &bt BT_CLR_ALL from the keymap instead.
-  # (assimilator-bt settings_reset fails: upstream board DTS references
-  #  spi1_default pinctrl that only the imprint shield overlay provides.)
-  - board: nice_nano
+  # Settings reset — flash to ALL devices before initial pairing.
+  - board: nice_nano_v2
     shield: settings_reset
     artifact-name: settings_reset_dongle
     cmake-args: -DCONFIG_ZMK_RGB_UNDERGLOW=n
+  - board: assimilator-bt
+    shield: settings_reset_peripheral
+    artifact-name: settings_reset_peripheral

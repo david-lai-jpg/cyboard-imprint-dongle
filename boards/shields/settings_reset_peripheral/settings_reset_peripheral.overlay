@@ -1,0 +1,24 @@
+/*
+ * Copyright (c) 2024 The ZMK Contributors
+ * SPDX-License-Identifier: MIT
+ *
+ * Custom settings_reset for assimilator-bt peripherals.
+ * The upstream settings_reset shield can't build with assimilator-bt because
+ * the board DTS references spi1_default pinctrl that only a keyboard shield
+ * overlay provides.  This shield bundles the pinctrl fix in boards/assimilator-bt.overlay.
+ */
+
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+    chosen {
+        zmk,kscan = &settings_reset_kscan;
+    };
+
+    settings_reset_kscan: settings_reset_kscan {
+        compatible = "zmk,kscan-mock";
+        columns = <1>;
+        rows = <0>;
+        events = <>;
+    };
+};
