@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: Cyboard-DigitalTailor
       url-base: https://github.com/Cyboard-DigitalTailor
+    - name: englmaxi
+      url-base: https://github.com/englmaxi
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -13,5 +15,8 @@ manifest:
       remote: Cyboard-DigitalTailor
       revision: main
       import: config/west.yml
+    - name: zmk-dongle-display
+      remote: englmaxi
+      revision: v0.3
   self:
     path: config
