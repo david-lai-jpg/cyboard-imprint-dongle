@@ -71,15 +71,15 @@ layers:
   - {t: '`', s: '~'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - F1
-  - F2
-  - F12
+  - '&td_f1'
+  - '&td_f2'
+  - '&td_f3'
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-right-click-outline$$
   - F3
   - LGUI
   - $$mdi:keyboard-space$$
-  - F3
+  - F12
   - {t: '&mouse_tog_enter', h: '&fn_layer_color'}
   - {t: '$$mdi:keyboard-return$$', h: '&sym_layer_color'}
   - {t: '$$mdi:backspace$$', h: NUMBER}

@@ -17,6 +17,27 @@
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
 
+        td_f1: td_f1 {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Double Tap F1";
+            #binding-cells = <0>;
+            bindings = <&none>, <&kp F1>;
+        };
+
+        td_f2: td_f2 {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Double Tap F2";
+            #binding-cells = <0>;
+            bindings = <&none>, <&kp F2>;
+        };
+
+        td_f3: td_f3 {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Double Tap F3";
+            #binding-cells = <0>;
+            bindings = <&none>, <&kp F3>;
+        };
+
         num_lt: num_lt {
             compatible = "zmk,behavior-hold-tap";
             display-name = "Backspace/NUMBER Layer";
@@ -167,8 +188,8 @@
 &td0     &hml LCTRL A    &hml LALT S    &hml LGUI D    &hml LSHFT F    &kp G               &kp H   &hmr RSHFT J    &hmr RGUI K    &hmr RALT L    &hmr RCTRL SEMI  &kp SQT
 &kp LCTRL &kp Z          &kp X          &kp C          &kp V           &kp B               &kp N   &kp M           &kp COMMA      &kp DOT        &kp FSLH         &kp BSLH
 &trans   &trans          &kp LCTRL      &kp LALT       &kp LGUI                                    &kp LBKT        &kp RBKT       &kp GRAVE      &trans           &trans
-                                                        &kp F1          &kp F2  &kp F12    &mkp LCLK &mkp RCLK      &kp F3
-                                                        &kp LGUI        &kp SPACE &kp F3    &mouse_lt_enter 0 0  &fn_lt_enter 0 ENTER  &num_lt 1 BSPC
+                                                        &td_f1          &td_f2  &td_f3     &mkp LCLK &mkp RCLK      &kp F3
+                                                        &kp LGUI        &kp SPACE &kp F12    &mouse_lt_enter 0 0  &fn_lt_enter 0 ENTER  &num_lt 1 BSPC
             >;
         };
 
