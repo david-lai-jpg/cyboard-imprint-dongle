@@ -1,10 +1,5 @@
 ---
 include:
-  # Original non-dongle builds (fallback)
-  - board: assimilator-bt
-    shield: imprint_left
-  - board: assimilator-bt
-    shield: imprint_right
   # Dongle builds
   - board: nice_nano_v2
     shield: imprint_dongle dongle_display
