@@ -4,8 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: Cyboard-DigitalTailor
       url-base: https://github.com/Cyboard-DigitalTailor
-    - name: efogdev
-      url-base: https://github.com/efogdev
+    - name: david-lai-jpg
+      url-base: https://github.com/david-lai-jpg
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -16,7 +16,7 @@ manifest:
       revision: 2ca51095
       import: config/west.yml
     - name: zmk-acceleration-curves
-      remote: efogdev
-      revision: d8b272a
+      remote: david-lai-jpg
+      revision: default-curve
   self:
     path: config

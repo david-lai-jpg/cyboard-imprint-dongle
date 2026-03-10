@@ -252,6 +252,10 @@
     };
 };
 
+&zip_scroll_accel {
+    default-curve = "0 0 102 100 10 38 10 100 102 100 5702 406 2271 89 544 355";
+};
+
 // right hand trackball configuration
 
 &trackball_peripheral_listener {
