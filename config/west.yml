@@ -13,7 +13,7 @@ manifest:
       import: app/west.yml
     - name: zmk-keyboards
       remote: Cyboard-DigitalTailor
-      revision: 2ca51095
+      revision: studio-support
       import: config/west.yml
     - name: zmk-acceleration-curves
       remote: david-lai-jpg
