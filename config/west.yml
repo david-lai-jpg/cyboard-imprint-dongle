@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: Cyboard-DigitalTailor
       url-base: https://github.com/Cyboard-DigitalTailor
+    - name: efogdev
+      url-base: https://github.com/efogdev
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -13,5 +15,8 @@ manifest:
       remote: Cyboard-DigitalTailor
       revision: 2ca51095
       import: config/west.yml
+    - name: zmk-acceleration-curves
+      remote: efogdev
+      revision: d8b272a
   self:
     path: config

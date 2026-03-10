@@ -1,4 +1,5 @@
 #include <input/processors.dtsi>
+#include <input/processors/accel_curve.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -254,17 +255,19 @@
 // right hand trackball configuration
 
 &trackball_peripheral_listener {
-    input-processors = <&zip_xy_scaler 33 20>;
+    input-processors = <&zip_xy_scaler 33 20>, <&zip_pointer_accel>;
 };
 
 // left hand trackball configuration
 
 &trackball_central_listener {
     input-processors =
-        // multiply sensitivity by 7, divide by 200 (0.035x scrolling),
-        <&zip_xy_scaler 7 200>,
+        // multiply sensitivity by 1, divide by 32 (0.03125x scrolling),
+        <&zip_xy_scaler 1 32>,
         // make this trackball output scrolling events by default instead of cursor movement,
         <&zip_xy_to_scroll_mapper>,
         // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,
-        <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
+        <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,
+        // apply acceleration curve (set via shell: curve set scroll <values>),
+        <&zip_scroll_accel>;
 };
