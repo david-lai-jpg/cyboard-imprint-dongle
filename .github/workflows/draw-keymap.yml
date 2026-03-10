@@ -17,4 +17,4 @@ jobs:
       keymap_patterns: "config/imprint_dongle.keymap"
       config_path: "keymap_drawer.config.yaml"
       output_folder: "keymap-drawer"
-      draw_args: "imprint_dongle:'-j config/imprint_dongle.json'"
+      draw_args: "imprint_dongle:'-j config/imprint_dongle.json -l imprint_function_row_full_bottom_row'"
