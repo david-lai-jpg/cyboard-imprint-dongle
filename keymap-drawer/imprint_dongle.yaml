@@ -1,4 +1,4 @@
-layout: {zmk_keyboard: imprint_dongle, layout_name: imprint_function_row_full_bottom_row}
+layout: {zmk_keyboard: imprint_dongle, layout_name: physical_layout_imprint_function_row_full_bottom_row}
 layers:
   BASE:
   - {t: '$$mdi:transfer$$', type: trans}
