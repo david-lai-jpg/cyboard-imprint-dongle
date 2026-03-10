@@ -17,7 +17,6 @@
     physical_layout_imprint_function_row_full_bottom_row: physical_layout_imprint {
         compatible = "zmk,physical-layout";
         display-name = "Imprint Function Row (5-Key Bottom Row)";
-        kscan = <&kscan0>;
         transform = <&imprint_function_row_full_bottom_row>;
 
         keys  //                     w   h    x    y     rot    rx    ry
