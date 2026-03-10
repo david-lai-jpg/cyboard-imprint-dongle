@@ -68,8 +68,8 @@ layers:
   - LGUI
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
-  - {t: '-', s: _}
   - {t: '`', s: '~'}
+  - {t: '-', s: _}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&td_f1'
   - '&td_f2'
