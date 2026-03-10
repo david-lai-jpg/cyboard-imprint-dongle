@@ -10,7 +10,7 @@
 
 / {
     chosen {
-        /delete-property/ zmk,matrix-transform;
+        /delete-property/ zmk,matrix_transform;
         zmk,physical-layout = &physical_layout_imprint_function_row_full_bottom_row;
     };
 
